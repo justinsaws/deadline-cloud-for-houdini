@@ -147,6 +147,8 @@ def _get_default_value(
 
     if param["name"] == "RezPackages":
         return (f"houdini-{houdini_version} deadline_cloud_for_houdini",)
+    elif param["name"] == "CondaChannels":
+        return ("deadline-cloud-v2",)
     elif param["name"] == "CondaPackages":
         return (f"houdini={houdini_version}.* houdini-openjd={adaptor_version}.*",)
     elif "default" in param:
